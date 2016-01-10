@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+  
+<suite name="ReleaseSuite" verbose="1" >
+  <test name="Smoke Tests" >
+
+      <parameter name="titlePost" value="Smoke test Page"/>
+      <parameter name="siteURL" value="https://www.udemy.com/"/>
+      <parameter name="browser" value="Firefox"/>
+      <parameter name="credentials" value="rajivkapadia504@yahoo.in#poppy123$"/>
+      <parameter name="userName" value="Rajiv Kapadia"/>
+      <!--
+      <packages>
+          <package name="com.shakti.TNGTests.smokeTests"/>
+      </packages>
+       -->
+
+      <classes>
+          <class name="com.shakti.TNGTests.SmokeTests.LoginTests"/>
+      </classes>
+
+
+
+  </test>
+</suite>
