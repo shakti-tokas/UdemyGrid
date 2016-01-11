@@ -67,7 +67,7 @@ public class Driver {
 
     public static void turnOnWait() {
         // TODO Auto-generated method stub
-        Instance.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        Instance.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Log.info("Driver Time-Out turned ON");
     }
 

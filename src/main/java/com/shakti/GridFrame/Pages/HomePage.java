@@ -31,7 +31,7 @@ public class HomePage {
     @FindBy(css = "div div.dropdown-menu div.header div.r span[class='title']")
     private static WebElement userTitle;
 
-    private static WebDriverWait waitHomePage = new WebDriverWait(Driver.Instance,15);
+    private static WebDriverWait waitHomePage = new WebDriverWait(Driver.Instance,5);
 
     public HomePage(WebDriver driver){
         homePageDriver = driver;
