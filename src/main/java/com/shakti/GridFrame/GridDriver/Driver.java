@@ -8,6 +8,7 @@ import com.shakti.GridFrame.GridLogger.Log;
 
 import org.openqa.selenium.WebDriver;
 
+import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -34,7 +35,7 @@ public class Driver {
         Instance = instance;
     }
 
-    public static void Initialize(BrowserType browserType) {
+    public static void InitializeLocalDriver(BrowserType browserType) {
 
         switch (browserType){
 
@@ -55,6 +56,24 @@ public class Driver {
                 turnOnWait();
                 //BrowserMaximize();
                 //In current build browser maximize is not supported by Microsoft Egde.
+                break;
+        }
+    }
+
+    public static void InitializeGridDriver(BrowserType browserType) throws MalformedURLException {
+
+        switch (browserType){
+
+            case Firefox:
+                Instance = MozillaFirefox.InitializeGridFirefox();
+                turnOnWait();
+                BrowserMaximize();
+                break;
+
+            case Chrome:
+                Instance = GoogleChrome.InitializeGridChrome();
+                turnOnWait();
+                BrowserMaximize();
                 break;
         }
     }
