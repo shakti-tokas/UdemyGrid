@@ -7,6 +7,7 @@
       <parameter name="titlePost" value="Smoke test Page"/>
       <parameter name="siteURL" value="https://www.udemy.com/"/>
       <parameter name="browser" value="Firefox"/>
+      <parameter name="gridFlag" value="OFF"/>
       <parameter name="credentials" value="rajivkapadia504@yahoo.in#poppy123$"/>
       <parameter name="userName" value="Rajiv Kapadia"/>
       <!--

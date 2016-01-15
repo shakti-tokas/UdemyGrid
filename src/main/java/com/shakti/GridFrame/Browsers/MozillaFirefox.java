@@ -19,7 +19,7 @@ public class MozillaFirefox {
     private static final String profilePath = "C:\\Users\\stokas\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\";
     private static final String foxProfile = "gq9ow771.testNGUser";
 
-    private static final String foxNode = "";
+    private static final String foxNode = "http://192.168.0.104:5555/wd/hub";
 
     //protected static ThreadLocal<RemoteWebDriver> threadDriver = null;
 
@@ -36,6 +36,7 @@ public class MozillaFirefox {
 
         DesiredCapabilities foxCap = DesiredCapabilities.firefox();
         foxCap.setBrowserName("firefox");
+        Log.info("Initializing the Firefox Driver On GRID");
 
         return new RemoteWebDriver(new URL(foxNode), foxCap);
     }

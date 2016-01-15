@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
   
-<suite name="Parallel Test Release Suite" verbose="3" parallel="tests" thread-count="2">
+<suite name="Parallel Test Release Suite" verbose="3" >
+
     <test name="Firefox Tests" >
 
-		  <parameter name="titlePost" value="Firefox test Page"/>
-		  <parameter name="wordPressURL" value="http://localhost:51396/"/>
-		  <parameter name="browser" value="Firefox"/>
-		  <parameter name="credentials" value="shaz1985#13jxesD7&amp;RayJpiHN1"/>
-		  <!--
-		  <packages>
-			  <package name="com.shakti.TNGTests.smokeTests"/>
-		  </packages>
-		  -->
+		<parameter name="titlePost" value="Smoke test Page"/>
+		<parameter name="siteURL" value="https://www.udemy.com/"/>
+		<parameter name="browser" value="Firefox"/>
+		<parameter name="gridFlag" value="ON"/>
+		<parameter name="credentials" value="rajivkapadia504@yahoo.in#poppy123$"/>
+		<parameter name="userName" value="Rajiv Kapadia"/>
 
 		  <classes>
 			  <class name="com.shakti.TNGTests.SmokeTests.LoginTests"/>
 		  </classes>
     </test>
-	
+
 	<test name="Chrome Tests" >
 
-		  <parameter name="titlePost" value="Chrome test Page"/>
-		  <parameter name="wordPressURL" value="http://localhost:51396/"/>
-		  <parameter name="browser" value="Chrome"/>
-		  <parameter name="credentials" value="shaz1985#13jxesD7&amp;RayJpiHN1"/>
+		<parameter name="titlePost" value="Smoke test Page"/>
+		<parameter name="siteURL" value="https://www.udemy.com/"/>
+		<parameter name="browser" value="Chrome"/>
+		<parameter name="gridFlag" value="ON"/>
+		<parameter name="credentials" value="rajivkapadia504@yahoo.in#poppy123$"/>
+		<parameter name="userName" value="Rajiv Kapadia"/>
 		  <!--
 		  <packages>
 			  <package name="com.shakti.TNGTests.smokeTests"/>
@@ -35,22 +35,23 @@
 			  <class name="com.shakti.TNGTests.SmokeTests.LoginTests"/>
 		  </classes>
     </test>
-	
+	<!--
 	<test name="Edge Tests" >
 
-		  <parameter name="titlePost" value="Edge test Page"/>
-		  <parameter name="wordPressURL" value="http://localhost:51396/"/>
-		  <parameter name="browser" value="Edge"/>
-		  <parameter name="credentials" value="shaz1985#13jxesD7&amp;RayJpiHN1"/>
-		  <!--
+		<parameter name="titlePost" value="Smoke test Page"/>
+		<parameter name="siteURL" value="https://www.udemy.com/"/>
+		<parameter name="browser" value="Edge"/>
+		<parameter name="credentials" value="rajivkapadia504@yahoo.in#poppy123$"/>
+		<parameter name="userName" value="Rajiv Kapadia"/>
+
 		  <packages>
 			  <package name="com.shakti.TNGTests.smokeTests"/>
 		  </packages>
-		  -->
+
 
 		  <classes>
 			  <class name="com.shakti.TNGTests.SmokeTests.LoginTests"/>
 		  </classes>
     </test>
-	
+	-->
 </suite>

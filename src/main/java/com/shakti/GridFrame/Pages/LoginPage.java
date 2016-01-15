@@ -3,6 +3,7 @@ package com.shakti.GridFrame.Pages;
 import com.shakti.GridFrame.GridDriver.Driver;
 import com.shakti.GridFrame.GridLogger.Log;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -50,10 +51,14 @@ public class LoginPage {
         //Driver.Instance.get(Driver.getBaseAddress());
         Log.info("Navigated to Udemy Login Page");
 
+        WebDriverWait wait = new WebDriverWait(Driver.Instance,5);
+
+        wait.until(ExpectedConditions.visibilityOf(loginLink));
+        //loginPageDriver.switchTo().window(loginPageDriver.getWindowHandle());
+        loginLink.sendKeys(Keys.CONTROL);
         loginLink.click();
 
-        WebDriverWait wait = new WebDriverWait(Driver.Instance,5);
-        Log.info("Waiting until items start displaying.");
+        Log.info("Waiting until login pane start displaying.");
         wait.until(ExpectedConditions.visibilityOf(userId));
         //wait.until(ExpectedConditions.visibilityOfElementLocated(userId));
     }

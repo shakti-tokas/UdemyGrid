@@ -14,7 +14,7 @@ import java.net.URL;
 public class GoogleChrome {
     private static final String chromePath = "E:\\GitHub\\UdemyGrid\\src\\main\\resources\\Ext_WebDrivers\\chromedriver.exe";
 
-    private static final String chromeNode = "";
+    private static final String chromeNode = "http://192.168.0.105:6666/wd/hub";
 
     public static ChromeDriver InitializeChrome(){
 
@@ -27,6 +27,7 @@ public class GoogleChrome {
 
         DesiredCapabilities chromeCap = DesiredCapabilities.chrome();
         chromeCap.setBrowserName("chrome");
+        Log.info("Initializing the Chrome Driver On GRID");
 
         return new RemoteWebDriver(new URL(chromeNode), chromeCap);
     }
